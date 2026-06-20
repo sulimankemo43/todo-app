@@ -33,3 +33,74 @@ body {
   text-align: center;
   margin-bottom: 24px;
 } 
+
+.add-form {
+  background-color: var(--bg-surface);
+  padding: 20px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.field-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.field-input {
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--text-main);
+  color: #000000;
+  font-size: 0.95rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  color: #000000;
+}
+
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  background-color: var(--bg-surface);
+  padding: 16px 20px;
+  border-radius: var(--radius);
+}
+
+.todo-title {
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.todo-details {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
