@@ -19,6 +19,14 @@ function App() {
     setTodos((prev) => prev.filter((todo) => todo.id !== idToRemove));
   }
 
+  function toggleTodo(idToToggle) {
+    setTodos((prev) =>
+      prev.map((todo) =>
+        todo.id === idToToggle ? { ...todo, done: !todo.done } : todo
+      )
+    );
+  }
+
   return (
     <main className="app">
       <h1>My Todos</h1>
@@ -27,7 +35,12 @@ function App() {
 
       <ul className="todo-list">
         {todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} onDelete={deleteTodo} />
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            onDelete={deleteTodo}
+            onToggle={toggleTodo}
+          />
         ))}
       </ul>
     </main>

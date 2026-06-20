@@ -126,3 +126,25 @@ body {
   color: var(--danger);
   border: 1px solid var(--danger);
 }
+
+.btn-success {
+  background-color: transparent;
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.btn-neutral {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--text-muted);
+}
+
+.is-done .todo-title,
+.is-done .todo-details {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.is-done {
+  opacity: 0.65;
+}
