@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddTodoForm from "./components/AddTodoForm";
+import TodoItem from "./components/TodoItem";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -14,6 +15,10 @@ function App() {
     setTodos((prev) => [...prev, newTodo]);
   }
 
+  function deleteTodo(idToRemove) {
+    setTodos((prev) => prev.filter((todo) => todo.id !== idToRemove));
+  }
+
   return (
     <main className="app">
       <h1>My Todos</h1>
@@ -22,10 +27,7 @@ function App() {
 
       <ul className="todo-list">
         {todos.map((todo) => (
-          <li key={todo.id} className="todo-item">
-            <h2 className="todo-title">{todo.title}</h2>
-            <p className="todo-details">{todo.details}</p>
-          </li>
+          <TodoItem key={todo.id} todo={todo} onDelete={deleteTodo} />
         ))}
       </ul>
     </main>
