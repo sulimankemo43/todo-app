@@ -31,18 +31,26 @@ function App() {
     <main className="app">
       <h1>My Todos</h1>
 
-      <AddTodoForm onAdd={addTodo} />
+      <section aria-label="Add a new task">
+        <AddTodoForm onAdd={addTodo} />
+      </section>
 
-      <ul className="todo-list">
-        {todos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            onDelete={deleteTodo}
-            onToggle={toggleTodo}
-          />
-        ))}
-      </ul>
+      <section aria-label="Task list">
+        {todos.length === 0 ? (
+          <p className="empty-msg">No tasks yet. Add your first task above.</p>
+        ) : (
+          <ul className="todo-list">
+            {todos.map((todo) => (
+              <TodoItem
+                key={todo.id}
+                todo={todo}
+                onDelete={deleteTodo}
+                onToggle={toggleTodo}
+              />
+            ))}
+          </ul>
+        )}
+      </section>
     </main>
   );
 }
