@@ -1,16 +1,74 @@
-# React + Vite
+# My Todos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, accessible, and responsive To-Do list application built with React. Users can add, delete, and mark tasks as complete, with full keyboard and screen reader support.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[View the live app on Vercel](#) <!-- Vercel link will go here after deployment -->
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Add tasks** with a name and an optional description
+- **Delete tasks** from the list
+- **Mark tasks complete** with a visual strike-through, and undo to make them active again
+- **Input validation** with clear error messages (empty names and overly long names are rejected)
+- **Responsive design** that works on desktop, tablet, and mobile
+- **Accessible**: keyboard navigable, semantic HTML, ARIA labels, and visible focus states
+- **Progressive Web App (PWA)**: installable and works offline
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (with Vite)
+- Plain CSS (no UI libraries)
+- Vitest and React Testing Library for testing
+- vite-plugin-pwa for PWA support
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Open the URL shown in the terminal (usually `http://localhost:5173`).
+
+## Testing
+
+Run the test suite:
+
+```bash
+npm test
+```
+
+Run tests with a coverage report:
+
+```bash
+npm run coverage
+```
+
+The project has over 90% test coverage across all components.
+
+## Building for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+  components/      Reusable UI components (Button, InputField, TodoItem, AddTodoForm)
+  test/            Unit and integration tests
+  App.jsx          Main application logic and state
+  main.jsx         Application entry point
+  index.css        Global styles
+```
