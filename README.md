@@ -4,7 +4,7 @@ A simple, accessible, and responsive To-Do list application built with React. Us
 
 ## Live Demo
 
-[View the live app on Vercel](#) <!-- Vercel link will go here after deployment -->
+[View the live app on Vercel](https://todo-app-ruby-pi-37.vercel.app)
 
 ## Features
 
